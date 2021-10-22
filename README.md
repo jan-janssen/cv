@@ -1,6 +1,6 @@
 # Curriculum Vitae
 
-[![compile-pdf](https://github.com/jan-janssen/cv/workflows/compile-pdf/badge.svg?event=push)](https://github.com/leouieda/cv/actions)
+[![compile-pdf](https://github.com/jan-janssen/cv/workflows/compile-pdf/badge.svg?event=push)](https://github.com/jan_janssen/cv/actions)
 
 These are the Latex sources for my academic CV.
 
@@ -37,7 +37,7 @@ I highly recommend using the `Makefile`:
 
 A PDF is compiled automatically by GitHub Actions with every commit to the
 *main* branch and uploaded to the *gh-pages* branch. This way, the compiled
-PDF is updated and served at https://www.leouieda.com/cv/leonardo_uieda_cv.pdf
+PDF is updated and served at https://www.jan-janssen.com/cv/jan_janssen_cv.pdf
 automatically.
 
 ## License
