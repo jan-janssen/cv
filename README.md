@@ -1,11 +1,11 @@
 # Curriculum Vitae
 
-[![compile-pdf](https://github.com/leouieda/cv/workflows/compile-pdf/badge.svg?event=push)](https://github.com/leouieda/cv/actions)
+[![compile-pdf](https://github.com/jan-janssen/cv/workflows/compile-pdf/badge.svg?event=push)](https://github.com/leouieda/cv/actions)
 
 These are the Latex sources for my academic CV.
 
 **Download** the latest compiled PDF:
-[leonardo_uieda_cv.pdf](https://www.leouieda.com/cv/leonardo_uieda_cv.pdf)
+[jan_janssen_cv.pdf](https://www.jan-janssen.com/cv/jan_janssen_cv.pdf)
 
 ## Template
 

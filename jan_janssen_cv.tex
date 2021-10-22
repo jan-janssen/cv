@@ -1,0 +1,408 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A clean template for an academic CV
+%
+% Uses tabularx to create two column entries (date and job/edu/citation).
+% Defines commands to make adding entries simpler.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt, a4paper]{article}
+
+% Full Unicode support for non-ASCII characters
+\usepackage[utf8]{inputenc}
+
+% Useful aliases
+\newcommand{\TUKL}{Technical University of Kaiserslautern}
+\newcommand{\MPIE}{Max-Planck-Institut f\"ur Eisenforschung}
+
+% Identifying information
+\newcommand{\Title}{Curriculum Vit\ae}
+\newcommand{\FirstName}{Jan}
+\newcommand{\LastName}{Janssen}
+\newcommand{\Initials}{J}
+\newcommand{\MyName}{\FirstName\ \LastName}
+\newcommand{\Me}{\textbf{\Initials. \LastName}}  % For citations
+\newcommand{\Email}{jan.janssen@outlook.com}
+\newcommand{\PersonalWebsite}{jan-janssen.com}
+\newcommand{\LabWebsite}{lanl.gov}
+\newcommand{\Affiliation}{Theoretical Division \\ Los Alamos National Laboratory}
+\newcommand{\ORCID}{0000-0001-9948-7119}
+\newcommand{\Address}{
+  Bikini Atoll Rd., SM 30 \\ Los Alamos, NM 87545, USA
+}
+
+% Names for citing coauthors
+\newcommand{\JN}{J. Neugebauer}
+\newcommand{\RD}{R. Drautz, R}
+\newcommand{\YL}{Y. Lysogorskiy}
+\newcommand{\MT}{M. Todorova}
+
+% Template configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Disable hyphenation
+\usepackage[none]{hyphenat}
+
+% Control the font size
+\usepackage{anyfontsize}
+
+% Icon fonts (requires using xelatex or luatex)
+\usepackage[fixed]{fontawesome5}
+\usepackage{academicons}
+
+% Template variables for styling
+\newcommand{\TablePad}{\vspace{-0.4cm}}
+\newcommand{\SoftwareTitle}[1]{{\bfseries #1}}
+\newcommand{\TableTitle}[1]{{\fontsize{12pt}{0}\selectfont \itshape #1}}
+
+% For fancy and multipage tables
+\usepackage{tabularx}
+\usepackage{ltablex}
+
+% Define a new environment to place all CV entries in a 2-column table.
+% Left column are the dates, right column the entries.
+\usepackage{environ}
+\NewEnviron{EntriesTable}{
+\TablePad
+\begin{tabularx}{\textwidth}{@{}p{0.12\textwidth}@{\hspace{0.02\textwidth}}p{0.86\textwidth}@{}}
+  \BODY
+\end{tabularx}
+}
+
+% Macros to add links and mark publications
+\newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
+\newcommand{\DOILink}[1]{\href{https://doi.org/#1}{doi.org/#1}}
+\newcommand{\Preprint}[1]{\newline • Preprint: \faFilePdf\ \DOILink{#1}}
+\newcommand{\Youtube}[1]{\newline • Recording: \faYoutube\, \href{https://www.youtube.com/watch?v=#1}{youtube.com/watch?v=#1}}
+\newcommand{\GitHub}[1]{\newline • Code: \faGithub\ \href{https://github.com/#1}{#1}}
+\newcommand{\Role}[1]{\newline • Role: #1}
+\newcommand{\Website}[1]{\newline • Website: \href{https://#1}{#1}}
+\newcommand{\Slides}[1]{\newline • Slides: \faTv\ \href{https://#1}{#1}}
+\newcommand{\SlidesDOI}[1]{\newline • Slides: \faTv\ \DOILink{#1}}
+\newcommand{\PosterDOI}[1]{\newline • Poster: \faImage\ \DOILink{#1}}
+\newcommand{\OA}{\aiOpenAccess\enspace}
+\newcommand{\Invited}{\newline • \textbf{Invited talk}}
+
+% Macros to set the year and duration on the left column
+\newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1 -- #2}
+\newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont #1}
+\newcommand{\Ongoing}{present}
+%\newcommand{\Ongoing}{$\ast$}
+\newcommand{\Future}{future}
+\newcommand{\Review}{in review}
+\newcommand{\Accepted}{accepted}
+\newcommand{\Appointment}[4]{\textbf{#1} \newline #2 \newline #3 \newline #4}
+
+% Define command to insert month name and year as date
+\usepackage{datetime}
+\newdateformat{monthyear}{\monthname[\THEMONTH], \THEYEAR}
+
+% Set the page margins
+\usepackage[a4paper,margin=1.5cm,includehead,headsep=5mm]{geometry}
+
+% To get the total page numbers (\pageref{LastPage})
+\usepackage{lastpage}
+
+% No indentation
+\setlength\parindent{0cm}
+
+% Increase the line spacing
+\renewcommand{\baselinestretch}{1.1}
+% and the spacing between rows in tables
+\renewcommand{\arraystretch}{1.5}
+
+% Remove space between items in itemize and enumerate
+\usepackage{enumitem}
+\setlist{nosep}
+
+% Use custom colors
+\usepackage[usenames,dvipsnames]{xcolor}
+
+% Set fonts. Requires compilation with xelatex
+\usepackage{fontspec}  % required to make older xelatex compile with UTF8
+
+% Configure the font style for sections
+\usepackage{sectsty}
+\sectionfont{\vspace{0.5cm}\bfseries\fontsize{12pt}{0}\selectfont\uppercase}
+\subsectionfont{\vspace{0.2cm}\mdseries\fontsize{12pt}{0}\selectfont\uppercase}
+
+% Set the spacing for sections
+%\usepackage{titlesec}
+%\titlespacing{\section}{0pt}{0cm}{0.3cm}
+%\titlespacing{\subsection}{0pt}{0.3cm}{0.3cm}
+
+% Disable number of sections. Use this instead of "section*" so that the sections still
+% appear as PDF bookmarks. Otherwise, would have to add the table of contents entries
+% manually.
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+% Set fancy headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\chead{
+  \fontsize{10pt}{12pt}\selectfont
+  \MyName
+  \hspace{0.2cm} -- \hspace{0.2cm}
+  \Title
+  \hspace{0.2cm} -- \hspace{0.2cm}
+  \monthyear\today
+}
+\rhead{\fontsize{10pt}{0}\selectfont \thepage/\pageref*{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+
+% Metadata for the PDF output and control of hyperlinks
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{
+  pdftitle={\MyName\ - \Title},
+  pdfauthor={\MyName},
+  linkcolor=blue,
+  citecolor=blue,
+  filecolor=black,
+  urlcolor=MidnightBlue
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+% No header for the first page
+\thispagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+{\fontsize{22pt}{0}\selectfont\MyName}\\[-0.1cm]
+\rule{\textwidth}{0.2pt}
+\begin{minipage}[t]{0.595\textwidth}
+  \Affiliation
+  \\
+  \Address
+\end{minipage}
+\begin{minipage}[t]{0.405\textwidth}
+  \begin{flushright}
+  Last updated: \monthyear\today
+  \\
+    ORCID: \href{https://orcid.org/\ORCID}{\ORCID}
+    \\
+    email: \href{mailto:\Email}{\Email}
+    \\
+    Research group: \href{https://www.\LabWebsite}{\LabWebsite}
+    \\
+    Website: \href{https://www.\PersonalWebsite}{\PersonalWebsite}
+  \end{flushright}
+\end{minipage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Professional Appointments}
+
+\begin{EntriesTable}
+  \Duration{2021}{\Ongoing}  &
+  \Appointment{Postdoctoral Research Associate}{Theoretical Division (T-1)}{Los Alamos National Laboratory}{Los Alamos, NM, USA}
+  \\
+  \Duration{2015}{2021}  &
+  \Appointment{PhD Candidate}{Computational Materials Design}{\MPIE}{D\"usseldorf, Germany}
+  \\
+  \Year{2017}   &
+  \Appointment{Invited Fellow}{Institute for Pure and Applied Mathematics}{University of California}{Los Angeles, CA, USA}
+  \\
+  \Year{2013}   &
+  \Appointment{Intern}{Application Platform Services}{Hilti}{Buchs, Switzerland}
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+
+\begin{EntriesTable}
+  \Duration{2015}{2021}  &
+  \textbf{PhD in Theoretical Physics}, Paderborn University, Germany
+  \\
+  \Duration{2010}{2011}  &
+  \textbf{Diplom in Theoretical Physics}, \TUKL, Germany
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Awards \& Honors}
+
+\begin{EntriesTable}
+  \Year{2019}  &
+  Runner-up for the Heinz Billing Award of 2019
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Publications}
+
+\begin{EntriesTable}
+\Year{2021}  &
+  L.F. Zhu, \Me, S. Ishibashi, F. Körmann, B. Grabowski and \JN.
+  A fully automated approach to calculate the melting temperature of elemental crystals.
+  \emph{Computational Materials Science}.
+  \DOI{10.1016/j.commatsci.2020.110065}.
+  \GitHub{pyiron/pyiron\_meltingpoint}
+  \\
+\Year{2020}  &
+  T.D. Swinburne, \Me, \MT,  G. Simpson, P. Plechac, M. Luskin, and \JN.
+  Anharmonic free energy of lattice vibrations in fcc crystals from a mean field bond.
+  \emph{PHYSICAL REVIEW B}.
+  \DOI{10.1103/PhysRevB.102.100101}.
+  \GitHub{tomswinburne/BLaSA}
+  \\
+\Year{2019}  &
+  \Me, S. Surendralal, \YL, \MT, T. Hickel, \RD and \JN.
+  pyiron: an integrated development environment for computational materials science.
+  \emph{Computational Materials Science}.
+  \DOI{10.1016/j.commatsci.2018.07.043}.
+  \GitHub{pyiron}
+  \\
+  ~ &
+  \YL, T. Hammerschmidt, \Me, \JN, \RD.
+  Transferability of interatomic potentials for molybdenum and silicon.
+  \emph{Modelling and Simulation in Materials Science and Engineering}.
+  \DOI{10.1088/1361-651X/aafd13}
+  \\
+\Year{2016}  &
+  \Me, N. Gunkelmann, H. M. Urbassek.
+  Influence of C concentration on elastic moduli of $\alpha^{\prime}-Fe_{1-x}C_{x}$ alloys.
+  \emph{Philosophical Magazine}.
+  \DOI{10.1080/14786435.2016.1170224}
+\end{EntriesTable}
+
+
+\subsection{Open-source Software}
+
+\begin{EntriesTable}
+  \Duration{2015}{\Ongoing} &
+  \textbf{pyiron}
+  \newline
+  An integrated development environment for computational materials science
+  \Role{Project Lead Developer}
+  \GitHub{pyiron}
+  \Website{www.pyiron.org}
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Workshops}
+
+\begin{EntriesTable}
+%\Year{future}  &
+\Year{2021} &
+  Workflows for Atomistic Simulation
+  \newline
+  \textit{\MPIE}, D\"usseldorf, Germany (online).
+  \GitHub{pyiron/potentials-workshop-2021}
+  \\
+\Year{2020} &
+  Software Tools from Atomistics to Phase Diagrams
+  \newline
+  \textit{\MPIE}, D\"usseldorf, Germany (online).
+  \GitHub{pyiron/phasediagram-workshop-2020}
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Presentations}
+
+\subsection{Invited Talks}
+\begin{EntriesTable}
+\Year{2021}  &
+  \Me, T. Hickel, \JN.
+  pyiron - an integrated development environment for materials science,
+  \emph{CECAM Workshop: Simulation Workflows in Materials Modelling (SWiMM)},
+  Lausanne, Switzerland (online).
+  \\
+\Year{2020}  &
+  \Me, T. Hickel, \JN.
+  Uncertainty quantification for ab initio thermodynamics,
+  \emph{Group Seminar Professor \RD},
+  Bochum, Germany (online).
+  \\
+  ~ &
+  \Me, T. Hickel, \JN.
+  Automated ab-initio determination of materials properties at finite temperatures with pyiron,
+  \emph{NIST Workshop: Atomistic simulations for industrial needs},
+  Gaitgersburg, MD, USA (online).
+  \\
+\Year{2019}  &
+  \Me, T. Hickel, \JN.
+  Automated ab-initio determination of materials properties at finite temperatures with pyiron,
+  \emph{CLNS Seminar Los Alamos National Laboratory},
+  Los Alamos, NM, USA.
+  \\
+  ~ &
+  \Me, T. Hickel, \JN.
+  pyiron - an integrated development environment for computational materials science,
+  \emph{Group Seminar Professor G. Kresse},
+  Vienna, Austria.
+  \\
+\end{EntriesTable}
+
+\subsection{Talks at International Conferences}
+\begin{EntriesTable}
+\Year{2019}  &
+  \Me, T. Hickel, \JN.
+  Automated uncertainty quantification for ab initio thermodynamics,
+  \emph{MRS Fall Meeting},
+  Boston, MA, USA.
+  \\
+  ~ &
+  \Me, T. Hickel, \JN.
+  Automated sensitivity analysis for high-throughput ab initio calculations,
+  \emph{IPAM Workshop},
+  Los Angeles, CA, USA.
+  \\
+  ~ &
+  \Me, T. Hickel, \JN.
+  Automated error analysis and control for ab initio calculations,
+  \emph{DPG Spring Meeting},
+  Regensburg, Germany.
+  \\
+  ~ &
+  \Me, T. Hickel, \JN.
+  Automated sensitivity analysis for high-throughput ab initio calculations,
+  \emph{TMS Spring Meeting},
+  San Antonio, TX, USA.
+  \\
+\Year{2018}  &
+  \Me, T. Hickel, \JN.
+  Generation of ab initio datasets with predefined precision using uncertainty quantification,
+  \emph{DPG Spring Meeting},
+  Berlin, Germany.
+  \\
+\Year{2017}  &
+  \Me, T. Hickel, \JN.
+  Towards an uncertainty quantification for ab initio thermodynamics,
+  \emph{MRS Fall Meeting},
+  Boston, MA, USA.
+  \\
+  ~&
+  \Me, T. Hickel, \JN.
+  Sensitivity analyis for large sets of density functional theory calculations,
+  \emph{DPG Spring Meeting},
+  Dresden, Germany.
+  \\
+  ~&
+  \Me, T. Hickel, \JN.
+  Automated convergence and error analyses for high-precision DFT calculations,
+  \emph{TMS Spring Meeting},
+  San Diego, CA, USA.
+  \\
+\Year{2016}  &
+  \Me, T. Hickel, \JN.
+  Automated convergence checks with the python based library pyiron,
+  \emph{DPG Spring Meeting},
+  Regensburg, Germany.
+  \\
+  ~&
+  \Me, T. Hickel, \JN.
+  Automated convergence checks with the python based workbench pyiron,
+  \emph{TMS Spring Meeting},
+  Nashville, TN, USA.
+  \\
+\end{EntriesTable}
+
+\end{document}
