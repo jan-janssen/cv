@@ -25,10 +25,10 @@
 \newcommand{\Email}{jan.janssen@outlook.com}
 \newcommand{\PersonalWebsite}{jan-janssen.com}
 \newcommand{\LabWebsite}{lanl.gov}
-\newcommand{\Affiliation}{Theoretical Division \\ Los Alamos National Laboratory}
+\newcommand{\Affiliation}{Theoretical Division, Los Alamos National Laboratory}
 \newcommand{\ORCID}{0000-0001-9948-7119}
 \newcommand{\Address}{
-  Bikini Atoll Rd., SM 30 \\ Los Alamos, NM 87545, USA
+  Bikini Atoll Rd., SM 30, Los Alamos, NM 87545, USA
 }
 
 % Names for citing coauthors
@@ -91,7 +91,7 @@
 \newcommand{\Future}{future}
 \newcommand{\Review}{in review}
 \newcommand{\Accepted}{accepted}
-\newcommand{\Appointment}[4]{\textbf{#1} \newline #2 \newline #3 \newline #4}
+\newcommand{\Appointment}[5]{\textbf{#1} - #2\newline Research topic: #3\newline #4, #5}
 
 % Define command to insert month name and year as date
 \usepackage{datetime}
@@ -119,7 +119,7 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 
 % Set fonts. Requires compilation with xelatex
-\usepackage{fontspec}  % required to make older xelatex compile with UTF8
+% \usepackage{fontspec}  % required to make older xelatex compile with UTF8
 
 % Configure the font style for sections
 \usepackage{sectsty}
@@ -182,13 +182,7 @@
 \end{minipage}
 \begin{minipage}[t]{0.405\textwidth}
   \begin{flushright}
-  Last updated: \monthyear\today
-  \\
-    ORCID: \href{https://orcid.org/\ORCID}{\ORCID}
-    \\
     Email: \href{mailto:\Email}{\Email}
-    \\
-    Research lab: \href{https://www.\LabWebsite}{\LabWebsite}
     \\
     Website: \href{https://www.\PersonalWebsite}{\PersonalWebsite}
   \end{flushright}
@@ -198,14 +192,20 @@
 \section{Professional Appointments}
 
 \begin{EntriesTable}
-  \Duration{2021}{\Ongoing}  &
-  \Appointment{Postdoctoral Research Associate}{Theoretical Division (T-1)}{Los Alamos National Laboratory}{Los Alamos, NM, USA}
+  \Year{2023}   &
+  \Appointment{Invited Postdoctoral Fellow}{Institute for Pure and Applied Mathematics (IPAM)}{new mathematics for the exascale: applications to materials science}{University of California}{Los Angeles, CA, USA}
   \\
-  \Duration{2015}{2021}  &
-  \Appointment{PhD Candidate}{Computational Materials Design}{\MPIE}{D\"usseldorf, Germany}
+  \Duration{2022}{\Ongoing}  &
+  \Appointment{Director's Postdoctoral Fellowship}{Theoretical Division (T-1)}{long-timescale simulations of materials with \textit{ab initio} accuracy}{Los Alamos National Laboratory}{Los Alamos, NM, USA}
+  \\
+  \Duration{2021}{2022}  &
+  \Appointment{Postdoctoral Research Associate}{Theoretical Division (T-1)}{exascale atomistic capability for accuracy, length, and time }{Los Alamos National Laboratory}{Los Alamos, NM, USA}
   \\
   \Year{2017}   &
-  \Appointment{Invited Fellow}{Institute for Pure and Applied Mathematics}{University of California}{Los Angeles, CA, USA}
+  \Appointment{Invited Fellow}{Institute for Pure and Applied Mathematics (IPAM)}{complex high-dimensional energy landscapes}{University of California}{Los Angeles, CA, USA}
+  \\
+  \Duration{2015}{2021}  &
+  \Appointment{PhD Candidate}{Computational Materials Design Department}{computational phase studies and \textit{ab initio} thermodynamics}{\MPIE}{D\"usseldorf, Germany}
 \end{EntriesTable}
 
 
@@ -214,81 +214,127 @@
 
 \begin{EntriesTable}
   \Duration{2015}{2021}  &
-  \textbf{PhD in Theoretical Physics}, Paderborn University, Germany
+  \textbf{PhD in Theoretical Physics} - Paderborn University, Germany \newline
+   • Thesis: pyiron - an integrated development environment for \textit{ab initio} thermodynamics \newline
+   • Advisor: Prof. J\"org Neugebauer\newline
+   • Grade: summa cum laude
   \\
   \Duration{2009}{2015}  &
-  \textbf{Advanced degree in Theoretical Physics (Master's equivalent)}, \TUKL, Germany
+  \textbf{Advanced Degree in Physics} - \TUKL, Germany \newline
+   • Thesis: carbon in $\alpha$-iron-grainboundaries - an atomistic study of elastic properties\newline
+   • Advisor: Prof. Herbert Urbassek\newline
+   • Grade: 1.0 excellent
 \end{EntriesTable}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Funded Proposals}
+\begin{EntriesTable}
+%\Year{future}  &
+\Year{2022} &
+  \textbf{Principal Investigator} of the ``transferability of interatomic machine learning potentials`` as part of the summer school for applied machine learning at Los Alamos National Laboratory.
+  \newline • Funding: \$19k 
+  \\ &
+  \textbf{Co-Principal Investigator} of the ``development and deployment of a fully autonomous in \textit{silico} processing and materials discovery platform`` in collaboration with the department of Mechanical Engineering at Texas A\&M University.
+  \newline • Funding: \$176k 
+\end{EntriesTable}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Awards \& Honors}
 
 \begin{EntriesTable}
+  \Year{2023}  &
+  Invited postdoctoral fellow at the Institute for Pure and Applied Mathematics (IPAM)
+  \\
+  \Year{2022}  &
+  Los Alamos National Laboratory (LANL) director's postdoctoral fellowship
+  \\
+  \Year{2021}  &
+  PhD with highest distinction - summa cum laude
+  \\
   \Year{2019}  &
-  Runner-up for the Heinz Billing Award of 2019
+  Runner-up for the Heinz Billing Award a national biennially award for outstanding contributions to computational science by younger scientist without tenure. 
+  \\
+  \Year{2017}  &
+  Invited fellow at the Institute for Pure and Applied Mathematics (IPAM)
+  \\
+  \Year{2015}  &
+  Scholarship of the \TUKL
 \end{EntriesTable}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Publications}
-
+Google Scholar, 10/22: Citations: 85
 \begin{EntriesTable}
 \Year{2021}  &
   L.F. Zhu, \Me, S. Ishibashi, F. Körmann, B. Grabowski and \JN.
   A fully automated approach to calculate the melting temperature of elemental crystals.
   \emph{Computational Materials Science}.
-  \DOI{10.1016/j.commatsci.2020.110065}.
+  \DOI{10.1016/j.commatsci.2020.110065}. Citations:~13
   \GitHub{pyiron/pyiron\_meltingpoint}
   \\
 \Year{2020}  &
   T.D. Swinburne, \Me, \MT,  G. Simpson, P. Plechac, M. Luskin and \JN.
   Anharmonic free energy of lattice vibrations in fcc crystals from a mean field bond.
   \emph{Physical Review B}.
-  \DOI{10.1103/PhysRevB.102.100101}.
+  \DOI{10.1103/PhysRevB.102.100101}. Citations:~1
   \GitHub{tomswinburne/BLaSA}
   \\
 \Year{2019}  &
   \Me, S. Surendralal, \YL, \MT, T. Hickel, \RD{} and \JN.
   pyiron: an integrated development environment for computational materials science.
   \emph{Computational Materials Science}.
-  \DOI{10.1016/j.commatsci.2018.07.043}.
+  \DOI{10.1016/j.commatsci.2018.07.043}. Citations:~45
   \GitHub{pyiron}
   \\
   ~ &
   \YL, T. Hammerschmidt, \Me, \JN{} and \RD.
   Transferability of interatomic potentials for molybdenum and silicon.
   \emph{Modelling and Simulation in Materials Science and Engineering}.
-  \DOI{10.1088/1361-651X/aafd13}
+  \DOI{10.1088/1361-651X/aafd13}. Citations:~15
   \\
 \Year{2016}  &
   \Me, N. Gunkelmann and H. M. Urbassek.
   Influence of C concentration on elastic moduli of $\alpha^{\prime}-Fe_{1-x}C_{x}$ alloys.
   \emph{Philosophical Magazine}.
-  \DOI{10.1080/14786435.2016.1170224}
+  \DOI{10.1080/14786435.2016.1170224}.
+  Citations:~11
 \end{EntriesTable}
 
+\subsection{Publications in review}
+\begin{EntriesTable}
+\Year{2022}  &
+  M.G. Taylor, D.J. Burrill, \Me, E. Batista, D. Perez, and P. Yang.
+  Architector: high-throughput cross-periodic table 3D complex builder. \emph{Nature Communications}.
+  \\
+\Year{2021}  &
+  \Me, E. Makarov, T. Hickel, A.V. Shapeev and \JN.
+  Automated optimization of convergence parameters in plane wave density functional theory calculations via a tensor decomposition-based uncertainty quantification. \emph{npj Computational Materials}.
+  \DOI{10.48550/arXiv.2112.04081}.
+  \GitHub{pyiron/pyiron-dft-uncertainty}
+\end{EntriesTable}
 
 \subsection{Open-source Software}
 
 \begin{EntriesTable}
   \Duration{2015}{\Ongoing} &
-  \textbf{pyiron}
-  \newline
-  An integrated development environment for computational materials science
-  \Role{Project Lead Developer}
+  \textbf{pyiron} - an integrated development environment for computational materials science
+  \Role{Lead developer for a team of eight core developers}
   \GitHub{pyiron}
-  \Website{pyiron.org}
   \\
   \Duration{2018}{\Ongoing} &
-  \textbf{Conda-Forge}
-  \newline
-  A community-led collection of recipes, build infrastructure and distributions for the conda package manager.
-  \Role{Maintainer for 400+ Materials Science Software Packages}
-  \GitHub{conda-forge}
-  \Website{conda-forge.org}
+  \textbf{Conda-forge} - community-led software distribution for the conda package manager
+  \Role{Maintainer for materials science software}
+  \newline • Contribution: $500+$ packages with a total of $80+$ million downloads
+  \GitHub{conda-forge/staged-recipes}
+  \\
+  \Year{2022} &
+  \textbf{Architector} - high-throughput cross-periodic table 3D complex builder
+  \newline • Contribution: Parallelization of the chemical complex building using mpi4py
+  \\
+  \Year{2021} &
+  \textbf{FitSNAP} - Software for generating SNAP machine-learning interatomic potentials
+  \newline • Contribution: Implemented a python library interface for the Exascale computing project
+  \GitHub{fitsnap/fitsnap}
 \end{EntriesTable}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Workshops}
@@ -296,18 +342,35 @@
 \begin{EntriesTable}
 %\Year{future}  &
 \Year{2021} &
-  Workflows for Atomistic Simulation
+  \textbf{Co-organizer} for the workshop on ``workflows for atomistic simulation``
   \newline
-  \textit{\MPIE}, D\"usseldorf, Germany (online).
+  \textit{\MPIE}, D\"usseldorf, Germany (online)
   \GitHub{pyiron/potentials-workshop-2021}
   \\
 \Year{2020} &
-  Software Tools from Atomistics to Phase Diagrams
+  \textbf{Co-organizer} for the workshop on ``software tools from atomistics to phase diagrams``
   \newline
-  \textit{\MPIE}, D\"usseldorf, Germany (online).
+  \textit{Pennsylvania State University}, Pennsylvania, USA (online)
   \GitHub{pyiron/phasediagram-workshop-2020}
 \end{EntriesTable}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Supervision}
+
+\begin{EntriesTable}
+%\Year{future}  &
+\Year{2022} &
+  \textbf{Jason Blake Gibson} (intern): Transferability of interatomic machine learning potentials 
+  \Role{Primary Supervisor - acquiring the funding and leading the supervision of the intern}
+  \\
+\Year{2018} &
+  \textbf{Ankita Biswas} (student assistant): Calculation of vacancy formation energies with pyiron
+  \Role{Primary Supervisor - for a student research project}
+  \\
+\Year{2017} &
+  \textbf{Martin B\"ockmann} (student assistant): Monte Carlo sampling with pyiron
+  \Role{Primary Supervisor - guiding the student as the first user of the pyiron software}
+\end{EntriesTable}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Presentations}
@@ -315,6 +378,18 @@
 \subsection{Invited Talks}
 \begin{EntriesTable}
 \Year{2022}  &
+  \Me, T. Hickel, \JN.
+  Automated atomistic calculation of thermodynamic and thermophysical data,
+  \emph{DPG Fall Meeting},
+  Regensburg, Germany.
+  \\
+  ~ &
+  \Me.
+  pyiron - an integrated development environment (IDE) for scientific workflows at scale,
+  \emph{Department of Energy Python Exchange},
+  New York, NY, USA (online).
+  \\
+  ~ &
   \Me.
   Up-scaling simulation protocols with pyiron,
   \emph{Platform Material Digital Workflow Meeting 2022},
@@ -327,26 +402,26 @@
   Stuttgart, Germany (online).
   \\
 \Year{2021}  &
-  \Me, T. Hickel, \JN.
+  \Me, \JN.
   pyiron - an integrated development environment for materials science,
   \emph{CECAM Workshop: Simulation Workflows in Materials Modelling (SWiMM)},
   Lausanne, Switzerland (online).
   \\
 \Year{2020}  &
   \Me, T. Hickel, \JN.
-  Uncertainty quantification for ab initio thermodynamics,
+  Uncertainty quantification for \textit{ab initio} thermodynamics,
   \emph{Group Seminar Professor \RD},
   Bochum, Germany (online).
   \\
   ~ &
   \Me, T. Hickel, \JN.
-  Automated ab-initio determination of materials properties at finite temperatures with pyiron,
+  Automated \textit{ab initio} determination of materials properties at finite temperatures with pyiron,
   \emph{NIST Workshop: Atomistic simulations for industrial needs},
   Gaitgersburg, MD, USA (online).
   \\
 \Year{2019}  &
   \Me, T. Hickel, \JN.
-  Automated ab-initio determination of materials properties at finite temperatures with pyiron,
+  Automated \textit{ab initio} determination of materials properties at finite temperatures with pyiron,
   \emph{CLNS Seminar Los Alamos National Laboratory},
   Los Alamos, NM, USA.
   \\
@@ -357,10 +432,21 @@
   Vienna, Austria.
   \\
 \end{EntriesTable}
-
 \subsection{Talks at International Conferences}
 \begin{EntriesTable}
 \Year{2022}  &
+  \Me, T. Hickel, \JN.
+  Predicting melting temperatures from bulk properties with pyiron,
+  \emph{Multiscale Materials Modelling (MMM) conference},
+  Baltimore, MD, USA.
+  \\
+  ~ &
+  \Me, M. G. Taylor, P. Yang, D. Perez.
+  High throughput screening of ligand-metal-complexes for separation science with pyiron,
+  \emph{ACS Fall Meeting},
+  Chicago, IL, USA.
+  \\
+  ~ &
   \Me. 
   pyiron – an integrated development environment (IDE) for scientific workflows,
   \emph{Scientific Computing with Python (SciPy)},
@@ -374,37 +460,37 @@
   \\
 \Year{2019}  &
   \Me, T. Hickel, \JN.
-  Automated uncertainty quantification for ab initio thermodynamics,
+  Automated uncertainty quantification for \textit{ab initio} thermodynamics,
   \emph{MRS Fall Meeting},
   Boston, MA, USA.
   \\
   ~ &
   \Me, T. Hickel, \JN.
-  Automated sensitivity analysis for high-throughput ab initio calculations,
+  Automated sensitivity analysis for high-throughput \textit{ab initio} calculations,
   \emph{IPAM Workshop},
   Los Angeles, CA, USA.
   \\
   ~ &
   \Me, T. Hickel, \JN.
-  Automated error analysis and control for ab initio calculations,
+  Automated error analysis and control for \textit{ab initio} calculations,
   \emph{DPG Spring Meeting},
   Regensburg, Germany.
   \\
   ~ &
   \Me, T. Hickel, \JN.
-  Automated sensitivity analysis for high-throughput ab initio calculations,
+  Automated sensitivity analysis for high-throughput \textit{ab initio} calculations,
   \emph{TMS Spring Meeting},
   San Antonio, TX, USA.
   \\
 \Year{2018}  &
   \Me, T. Hickel, \JN.
-  Generation of ab initio datasets with predefined precision using uncertainty quantification,
+  Generation of \textit{ab initio} datasets with predefined precision using uncertainty quantification,
   \emph{DPG Spring Meeting},
   Berlin, Germany.
   \\
 \Year{2017}  &
   \Me, T. Hickel, \JN.
-  Towards an uncertainty quantification for ab initio thermodynamics,
+  Towards an uncertainty quantification for \textit{ab initio} thermodynamics,
   \emph{MRS Fall Meeting},
   Boston, MA, USA.
   \\
