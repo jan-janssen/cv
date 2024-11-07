@@ -34,6 +34,9 @@ jobs:
           path: ~/conda_pkgs_dir
           key: conda-${{ runner.os }}-${{ hashFiles('environment.yml') }}
 
+      - name: Conda config
+        run: echo -e "channels:\n  - conda-forge\n" > .condarc
+
       - name: Setup Mambaforge
         uses: conda-incubator/setup-miniconda@v3
         with:
