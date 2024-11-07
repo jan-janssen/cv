@@ -22,10 +22,10 @@
 \newcommand{\Initials}{J}
 \newcommand{\MyName}{\FirstName\ \LastName}
 \newcommand{\Me}{\textbf{\Initials. \LastName}}  % For citations
-\newcommand{\Email}{janssen@mpie.de}
+\newcommand{\Email}{janssen@mpi-susmat.de}
 \newcommand{\PersonalWebsite}{jan-janssen.com}
-\newcommand{\LabWebsite}{lanl.gov}
-\newcommand{\Affiliation}{\MPIE}
+\newcommand{\LabWebsite}{mpie.de}
+\newcommand{\Affiliation}{Max-Planck-Institut for Sustainable Materials}
 \newcommand{\ORCID}{0000-0001-9948-7119}
 \newcommand{\Address}{
   Max-Planck-Str. 1, 40237 D\"usseldorf, Germany
@@ -193,7 +193,10 @@
 
 \begin{EntriesTable}
   \Duration{2023}{\Ongoing}  &
-  \Appointment{Group leader for Materials Informatics}{Computational Materials Design}{machine learning for atomistic simulation}{\MPIE}{D\"usseldorf, Germany}
+  \Appointment{Group leader for Materials Informatics}{Computational Materials Design}{foundation models for sustainable materials}{Max-Planck-Institute for Sustainable Materials}{D\"usseldorf, Germany}
+  \\
+  \Year{2024}  &
+  \Appointment{Invited Fellow}{Institute for Mathematical and Statistical Innovation (IMSI)}{data-driven materials informatics}{University of Chicago}{Chicago, IL, USA}
   \\
   \Duration{2022}{2023}  &
   \Appointment{Director's Postdoctoral Fellowship}{Theoretical Division (T-1)}{long-timescale simulations of materials with \textit{ab initio} accuracy}{Los Alamos National Laboratory}{Los Alamos, NM, USA}
@@ -228,11 +231,15 @@
    • Advisor: Prof. Herbert Urbassek\newline
    • Grade: thesis 1.0 (excellent) - total 1.6 (good)
 \end{EntriesTable}
-
+\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Funded Proposals}
 \begin{EntriesTable}
 %\Year{future}  &
+\Year{2024} &
+  \textbf{Principal Investigator} as part of the collaborative research center (CRC) 1394 ``Structural and chemical atomic complexity - from defect phase diagrams to material properties``
+  \newline • Funding: 160k Euro 
+  \\
 \Year{2023} &
   \textbf{Principal Investigator} of ``workflows for machine learned interatomic potentials`` as part of an internal call for funding for Postdoctoral Fellows at Los Alamos National Laboratory
   \newline • Computing Hardware Funding: \$13k 
@@ -255,6 +262,11 @@
 \section{Awards \& Honors}
 
 \begin{EntriesTable}
+  \Year{2024}  & 
+  Winner of the ``2nd Annual Large Language Model Hackathon for Applications in Materials Science and Chemistry`` coupling a large language model to atomistic simulation
+  \\ &
+  Invited fellow at the Institute for Statistical and Mathematical Innovation (IMSI)
+  \\
   \Year{2023}  &
   Invited postdoctoral fellow at the Institute for Pure and Applied Mathematics (IPAM)
   \\
@@ -274,26 +286,27 @@
   Scholarship of the \TUKL
 \end{EntriesTable}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
 \section{Publications}
-Google Scholar, 08/23: Citations: 119
+Google Scholar, 7/24: Citations: 189
 \begin{EntriesTable}
 \Year{2023}  &
   M.G. Taylor, D.J. Burrill, \Me, E. Batista, D. Perez, and P. Yang.
   Architector: high-throughput cross-periodic table 3D complex builder. \emph{Nature Communications}.
-  \DOI{10.1038/s41467-023-38169-2}. Citations:~0
+  \DOI{10.1038/s41467-023-38169-2}. Citations:~1
   \GitHub{lanl/Architector}
   \\
   ~ &
   A. Rohskopf, C. Sievers, N. Lubbers, M. A. Cusentino, J. Goff, \Me, M. McCarthy, D. Montes de Oca Zapiain, S. Nikolov, K. Sargsyan, E. Sikorski, L. Williams, D. Sema, A. P. Thompson, and M. A. Wood
   FitSNAP: Atomistic machine learning in LAMMPS. \emph{Journal of Open Source Software}.
-  \DOI{10.21105/joss.05118}. Citations:~3
+  \DOI{10.21105/joss.05118}. Citations:~8
   \GitHub{FitSNAP/FitSNAP}
   \\
 \Year{2021}  &
   L.F. Zhu, \Me, S. Ishibashi, F. Körmann, B. Grabowski and \JN.
   A fully automated approach to calculate the melting temperature of elemental crystals.
   \emph{Computational Materials Science}.
-  \DOI{10.1016/j.commatsci.2020.110065}. Citations:~17
+  \DOI{10.1016/j.commatsci.2020.110065}. Citations:~22
   \GitHub{pyiron/pyiron\_meltingpoint}
   \\
 \Year{2020}  &
@@ -307,7 +320,7 @@ Google Scholar, 08/23: Citations: 119
   \Me, S. Surendralal, \YL, \MT, T. Hickel, \RD{} and \JN.
   pyiron: an integrated development environment for computational materials science.
   \emph{Computational Materials Science}.
-  \DOI{10.1016/j.commatsci.2018.07.043}. Citations:~66
+  \DOI{10.1016/j.commatsci.2018.07.043}. Citations:~73
   \GitHub{pyiron}
   \\
   ~ &
@@ -326,6 +339,20 @@ Google Scholar, 08/23: Citations: 119
 
 \subsection{Publications in review}
 \begin{EntriesTable}
+\Year{2024}  &
+  S. Menon, Y. Lysogorskiy, A. L. M. Knoll, N. Leimeroth, M. Poul, M. Qamar, \Me, M. Mrovec, J. Rohrer, K. Albe, J. Behler, R. Drautz, and \JN.
+  From electrons to phase diagrams with classical and machine learning potentials automated workflows for materials science with pyiron.
+  \emph{npj Computational Materials}.
+  \DOI{10.48550/arXiv.2403.05724}.
+  \GitHub{pyiron/potential\_publication}
+  \\
+  ~ &
+  M. Tynes, M.G. Taylor, \Me, D. Burrill, D. Perez, P. Yang, and N. Lubbers.
+  Linear Graphlet Models for Accurate and Interpretable Cheminformatics.
+  \emph{Digital Discovery}.
+  \DOI{10.26434/chemrxiv-2024-r81c8}.
+  \GitHub{lanl/minervachem}
+  \\
 \Year{2021}  &
   \Me, E. Makarov, T. Hickel, A.V. Shapeev and \JN.
   Automated optimization of convergence parameters in plane wave density functional theory calculations via a tensor decomposition-based uncertainty quantification. \emph{npj Computational Materials}.
@@ -344,8 +371,13 @@ Google Scholar, 08/23: Citations: 119
   \Duration{2018}{\Ongoing} &
   \textbf{Conda-forge} - community-led software distribution for the conda package manager
   \Role{Maintainer for materials science software}
-  \newline • Contribution: $600+$ packages with a total of $150+$ million downloads
+  \newline • Contribution: over $800$ packages with a total of over $200$ million downloads
   \GitHub{conda-forge/staged-recipes}
+  \\
+  \Year{2024} &
+  \textbf{LangSim} - Large language model for atomistic simulation
+  \newline • Contribution: Lead the team of international researchers
+  \GitHub{jan-janssen/LangSim}
   \\
   \Year{2022} &
   \textbf{Architector} - high-throughput cross-periodic table 3D complex builder
@@ -357,7 +389,6 @@ Google Scholar, 08/23: Citations: 119
   \newline • Contribution: Implemented a python library interface for the Exascale computing project
   \GitHub{fitsnap/fitsnap}
 \end{EntriesTable}
-\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Workshops}
 
@@ -367,13 +398,13 @@ Google Scholar, 08/23: Citations: 119
   \textbf{Co-organizer} for the workshop on ``workflows for atomistic simulation``
   \newline
   \textit{\MPIE}, D\"usseldorf, Germany (online)
-  \GitHub{pyiron/potentials-workshop-2021}
+  \GitHub{pyiron-workshop/potentials-workshop-2021}
   \\
 \Year{2020} &
   \textbf{Co-organizer} for the workshop on ``software tools from atomistics to phase diagrams``
   \newline
   \textit{Pennsylvania State University}, Pennsylvania, USA (online)
-  \GitHub{pyiron/phasediagram-workshop-2020}
+  \GitHub{pyiron-workshop/phasediagram-workshop-2020}
 \end{EntriesTable}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -381,6 +412,10 @@ Google Scholar, 08/23: Citations: 119
 
 \begin{EntriesTable}
 %\Year{future}  &
+\Duration{2024}{\Ongoing} &
+  \textbf{Haitham Wael Ali Awad Gaafer} (PhD student): Potentials for chemo-mechanics
+  \Role{Supervisor - acquiring the funding and leading the supervision of the PhD student}
+  \\
 \Duration{2023}{\Ongoing} &
   \textbf{Ilgar Baghishov} (intern): Multi-fidelity machine learned interatomic potentials
   \Role{Primary Supervisor - acquiring the funding and leading the supervision of the intern}
@@ -407,16 +442,40 @@ Google Scholar, 08/23: Citations: 119
 
 \subsection{Invited Talks}
 \begin{EntriesTable}
+\Year{2024}  &
+  \Me.
+  Foundation Models for Materials Discovery,
+  \emph{Summer School at Center for Scientific Foundation Models},
+  Michigan, MI, USA (online).
+  \\
+  ~ &
+  \Me.
+  pyiron: Simulation Workflows for Data-Driven Materials Design,
+  \emph{Center for Nonlinear Studies (CNLS) Seminar Los Alamos National Laboratory},
+  Los Alamos, NM, USA.
+  \\
+  ~ &
+  \Me.
+  pyiron: workflows for the development and assessment of interatomic potentials,
+  \emph{Workshop on Machine Learning Force Fields at the institute for mathematical and statistical innovation (IMSI)},
+  Chicago, Il, USA.
+  \\
 \Year{2023}  &
+  \Me, \JN.
+  Rapid prototyping and up-scaling atomistic workflows with pyiron ,
+  \emph{Ab initio Description of Iron and Steel (ADIS): Digitalization and Workflows},
+  Kreuth, Germany.
+  \\
+  ~ &
   \Me.
   Packaging Scientific Software with Conda-Forge,
-  \emph{Workshop at the institute for pure and applied math (IPAM)},
+  \emph{Workshop at the Institute for Pure and Applied Math (IPAM)},
   Los Angeles, CA, USA.
   \\
   ~ &
   \Me, D. Perez.
   Up-scaling atomistic simulation workflows with pyiron,
-  \emph{Workshop at the institute for pure and applied math (IPAM)},
+  \emph{Workshop at the Institute for Pure and Applied Math (IPAM)},
   Los Angeles, CA, USA.
   \\
   ~ &
@@ -470,7 +529,7 @@ Google Scholar, 08/23: Citations: 119
 \Year{2019}  &
   \Me, T. Hickel, \JN.
   Automated \textit{ab initio} determination of materials properties at finite temperatures with pyiron,
-  \emph{CLNS Seminar Los Alamos National Laboratory},
+  \emph{Center for Nonlinear Studies (CNLS) Seminar at Los Alamos National Laboratory},
   Los Alamos, NM, USA.
   \\
   ~ &
@@ -482,6 +541,12 @@ Google Scholar, 08/23: Citations: 119
 \end{EntriesTable}
 \subsection{Talks at International Conferences}
 \begin{EntriesTable}
+\Year{2024}  &
+  \Me, D. Perez.
+  Transferable Machine Learning Potentials for Extreme Environments,
+  \emph{TMS Spring Meeting},
+  Orlando, Fl, USA.
+  \\
 \Year{2023}  &
   \Me, D. Perez.
   Parameter studies for interatomic potentials using LAMMPS and pyiron,
