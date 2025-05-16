@@ -1,6 +1,6 @@
 # Curriculum Vitae
 
-[![compile-pdf](https://github.com/jan-janssen/cv/workflows/compile-pdf/badge.svg?event=push)](https://github.com/jan_janssen/cv/actions)
+[![compile-pdf](https://github.com/jan-janssen/cv/actions/workflows/build.yml/badge.svg)](https://github.com/jan-janssen/cv/actions)
 
 These are the Latex sources for my academic CV.
 
