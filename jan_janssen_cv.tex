@@ -92,6 +92,7 @@
 \newcommand{\Review}{in review}
 \newcommand{\Accepted}{accepted}
 \newcommand{\Appointment}[5]{\textbf{#1} - #2\newline Research topic: #3\newline #4, #5}
+\newcommand{\TeachingAppointment}[4]{\textbf{#1} - #2\newline #3, #4}
 
 % Define command to insert month name and year as date
 \usepackage{datetime}
@@ -195,6 +196,9 @@
   \Duration{2023}{\Ongoing}  &
   \Appointment{Group leader for Materials Informatics}{Computational Materials Design}{foundation models for sustainable materials}{Max Planck Institute for Sustainable Materials}{D\"usseldorf, Germany}
   \\
+  \Duration{2026}{\Ongoing}  &
+  \TeachingAppointment{Guest Lecturer}{Interdisciplinary Centre for Advanced Materials Simulation (ICAMS)}{Ruhr University Bochum}{Bochum, Germany}
+  \\
   \Year{2024}  &
   \Appointment{Invited Fellow}{Institute for Mathematical and Statistical Innovation (IMSI)}{data-driven materials informatics}{University of Chicago}{Chicago, IL, USA}
   \\
@@ -236,6 +240,10 @@
 \section{Funded Proposals}
 \begin{EntriesTable}
 %\Year{future}  &
+\Year{2026} &
+  \textbf{Principal Investigator} as part of the National Research Data Infrastructure for Materials Science and Engineering (NFDI-Matwerk)
+  \newline • Funding: EUR 190k 
+  \\
 \Year{2024} &
   \textbf{Principal Investigator} as part of the International Max Planck Research School for Sustainable Metallurgy - from Fundamentals to Engineering Materials
   \newline • Funding: EUR 150k 
@@ -291,22 +299,50 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagebreak
 \section{Publications}
-Google Scholar, 04/26: Citations: 501
+Google Scholar, 10/26: Citations: 746
 
 \begin{EntriesTable}
 \Year{2026}  &
+  \Me, O. Waseda, B. Bayerlein, S. Stier, S. Brinckmann, A.A. Guzmán, S. Menon, M.A. Popp, J.R. Pedersen, I.E. Castelli, J. Waitelonis, W. Wenzel, \JN, J. Schaarschmidt and T. Hickel.
+  Toward Full Interoperability in Materials Science: Integrating Workflows With Knowledge Graphs.
+  \emph{Adv. Eng. Mater.}
+  \DOI{10.1002/adem.71258}.
+  Citations:~0
+  \\
+  ~ &
+  M. Bruns, L. Abdul, S. Barth, M. Glauer, M. Günther, F. Neuhaus, J.-O. Perschewski, T. Bjarsch, H. Abel, J. Bosch, N. Meyer, P. Hofmann, M. Drechsler, A. Dyck, D.K. Nerella, M. Tegeler, O. Shchyglo, I. Steinbach, T. Klecker, H. Birkholz, E. B. Farahani, B. Fedelich, C. Haftaoglu, T. Lakshmipathy, E.G. Trelles, C. Schweizer, R.D. Kamachali, L. Koschmieder, J. Eiken, M. Apel, S.-M. Wi, J. Zhao, A. Fezer, N. Christ, P. Schneider, E. Urinov, V. Königer, V. Knoblauch, J. Harter, T. Seifert, T. Janpheng, F. Fuchs, F. Teichert, J. Schuster, A. Bardehle, A. Limper, U. Giese, C. Lucke, M. Beiner, C. Gögelein, L. Leuchtenberger-Engel, C. Hopmann, F. Wentzien, H. Wittek, B. Klie, A. Röhrs, L. Overmeyer, A. Atila, M. Sadowski, L. Talirz, \Me, J.R. Pedersen, P. Beck, T. Vegge, I.E. Castelli, W. Wenzel, T. Hickel and J. Schaarschmidt
+  Supporting AI Readiness Through Digital Workflows in Materials Science.
+  \emph{Adv. Eng. Mater.}
+  \DOI{10.1002/adem.71262}.
+  Citations:~1
+  \\
+  ~ &
+  \Me, and {\JN}. pysqa - Python Simple Queuing System Adapter. \emph{Journal of Open Source Software}.
+  \DOI{10.21105/joss.10961}.
+  Citations:~0
+  \GitHub{pyiron/pysqa}
+  \\
+  ~ &
+  V.F. Grizzi, P.J. Lohr, N. Fedik, S. Anaya, J. Averitt, J. Gomes, Y. Wai Li, K. Barros, N. Lubbers, R.A. Messerly, \Me, M. Kulichenko, J. Smith, S. Tretiak and B.T. Nebgen. 
+  ALF: Open-Source Active Learning Framework for Atomistic Modeling.
+  \emph{J. Chem. Theory Comput.}.
+  \DOI{10.1021/acs.jctc.6c01122}.
+  Citations:~1
+  \GitHub{lanl/ALF}
+  \\
+  ~ &
   S. Brinckmann, S. Menon, R. Röske, J. Steinhülb, M. Selzer, \Me, T. Hickel, R. Schwaiger and J. Neugebauer.
   A Lightweight Procedural Layer for Hybrid Experimental-Computational Workflows in Materials Science.
   \emph{Adv. Eng. Mater.}
   \DOI{10.1002/adem.202503176}.
-  Citations:~0
+  Citations:~2
   \\
   ~ &
   Sk Md A.A. Alvi, B. Vela, V. Attari, \Me, D. Perez, D. Allaire, and R. Arróyave. 
   Deep Gaussian process-based cost-aware batch Bayesian optimization for complex materials design campaigns.
   \emph{npj Computational Materials}.
   \DOI{10.1038/s41524-026-01981-7}.
-  Citations:~2
+  Citations:~7
   \\
   ~ &
   M. Stricker, L. Banko, N. Sarazin, N. Siemer, \Me, L. Zhang, {\JN} and A. Ludwig. Computationally accelerated experimental materials characterization - drawing inspiration from high-throughput simulation workflows. \emph{npj Computational Materials}.
@@ -317,58 +353,58 @@ Google Scholar, 04/26: Citations: 501
   I. Baghishov, \Me, G. Henkelman and D. Perez.
   Application-specific Machine-Learned Interatomic Potentials: Exploring the Trade-off Between DFT Convergence, MLIP Expressivity, and Computational Cost. \emph{Digital Discovery}.
   \DOI{10.1039/D5DD00294J}.
-  Citations:~1
+  Citations:~8
   \GitHub{IlgarBaghishov/DFTprecisionMLIP}
   \\
 \Year{2025}  &
   Sk Md A.A. Alvi, M. Mulukutla, N. Flores, D. Khatamsaz, \Me, D. Perez, D. Allaire, V. Attari and R. Arróyave.
   Accurate and uncertainty-aware multi-task prediction of HEA properties using prior-guided deep Gaussian processes. \emph{npj Computational Materials}.
   \DOI{10.1038/s41524-025-01811-2}.
-  Citations:~2
+  Citations:~7
   \GitHub{sheikhahnaf/DGP\_with\_EncoderDecoderPrior}
   \\
   ~ &
   \Me, J. George, J. Geiger, M. Bercx, X. Wang, C. Ertural, J. Schaarschmidt, A.M. Ganose, G. Pizzi, T. Hickel and \JN.
   A Python workflow definition for computational materials design. \emph{Digital Discovery}.
   \DOI{10.1039/D5DD00231A}.
-  Citations:~5
+  Citations:~18
   \GitHub{pythonworkflow/python-workflow-definition}
   \\
   ~ &
   Y. Zimmermann, A. Bazgir, A. Al-Feghali, M. Ansari, L.C. Brinson, Y. Chiang, D. Circi, M.-H. Chiu, N. Daelman, M.L. Evans, A.S. Gangan, J. George, H. Harb, G. Khalighinejad, S.T. Khan, S. Klawohn, M. Lederbauer, S. Mahjoubi, B. Mohr, S.M. Moosavi, A. Naik, A.B. Ozhan, D. Plessers, A. Roy, F. Schöppach, P. Schwaller, C. Terboven, K. Ueltzen, S. Zhu, \Me, C. Li, I. Foster, B. Blaiszik. 32 examples of LLM applications in materials science and chemistry: towards automation, assistants, agents, and accelerated scientific discovery. \emph{Machine Learning: Science and Technology}.
   \DOI{10.1088/2632-2153/ae011a}.
-  Citations:~13
+  Citations:~50
   \GitHub{jan-janssen/LangSim}
   \\
   ~ &
   \Me, M.G. Taylor, P. Yang, {\JN} and D. Perez. Executorlib – Up-scaling Python workflows for hierarchical heterogenous high-performance computing. \emph{Journal of Open Source Software}.
   \DOI{10.21105/joss.07782}.
-  Citations:~2
+  Citations:~7
   \GitHub{pyiron/executorlib}
   \\
   ~&
   Sk Md A.A. Alvi, \Me, D. Khatamsaz, D. Perez, D. Allaire and R. Arróyave. Hierarchical Gaussian process-based Bayesian optimization for materials discovery in high entropy alloy spaces. \emph{Acta Materialia}.
   \DOI{10.1016/j.actamat.2025.120908}.
-  Citations:~17
+  Citations:~33
   \GitHub{sheikhahnaf/DGP-BO}
   \\
 \Year{2024}  &
   \Me, E. Makarov, T. Hickel, A.V. Shapeev and \JN. Automated optimization and uncertainty quantification of convergence parameters in plane wave density functional theory. \emph{npj Computational Materials}.
   \DOI{10.1038/s41524-024-01388-2}.
-  Citations:~9
+  Citations:~14
   \GitHub{pyiron/pyiron-dft-uncertainty}
   \\
   ~&
   T.J. Summers, M.G. Taylor, L.J. Augustine, \Me, D. Perez, E.R. Batista, and P. Yang. On the Importance of Configuration Search to the Predictivity of Lanthanide Selectivity. \emph{JACS Au}.
   \DOI{10.1021/jacsau.4c00770}.
-  Citations:~14
+  Citations:~23
   \\
   ~ &
   S. Menon, Y. Lysogorskiy, A. L. M. Knoll, N. Leimeroth, M. Poul, M. Qamar, \Me, M. Mrovec, J. Rohrer, K. Albe, J. Behler, R. Drautz, and \JN.
   From electrons to phase diagrams with classical and machine learning potentials automated workflows for materials science with pyiron.
   \emph{npj Computational Materials}. 
   \DOI{10.1038/s41524-024-01441-0}.
-  Citations:~22
+  Citations:~39
   \GitHub{pyiron/potential\_publication}
   \\
   ~ &
@@ -376,26 +412,26 @@ Google Scholar, 04/26: Citations: 501
   Linear graphlet models for accurate and interpretable cheminformatics.
   \emph{Digital Discovery}.
   \DOI{10.1039/D4DD00089G}.
-  Citations:~6
+  Citations:~10
   \GitHub{lanl/minervachem}
   \\
 \Year{2023}  &
   M.G. Taylor, D.J. Burrill, \Me, E. Batista, D. Perez, and P. Yang.
   Architector: high-throughput cross-periodic table 3D complex builder. \emph{Nature Communications}.
-  \DOI{10.1038/s41467-023-38169-2}. Citations:~50
+  \DOI{10.1038/s41467-023-38169-2}. Citations:~72
   \GitHub{lanl/Architector}
   \\
   ~ &
   A. Rohskopf, C. Sievers, N. Lubbers, M. A. Cusentino, J. Goff, \Me, M. McCarthy, D. Montes de Oca Zapiain, S. Nikolov, K. Sargsyan, E. Sikorski, L. Williams, D. Sema, A. P. Thompson, and M. A. Wood.
   FitSNAP: Atomistic machine learning in LAMMPS. \emph{Journal of Open Source Software}.
-  \DOI{10.21105/joss.05118}. Citations:~62
+  \DOI{10.21105/joss.05118}. Citations:~71
   \GitHub{FitSNAP/FitSNAP}
   \\
 \Year{2021}  &
   L.F. Zhu, \Me, S. Ishibashi, F. Körmann, B. Grabowski and \JN.
   A fully automated approach to calculate the melting temperature of elemental crystals.
   \emph{Computational Materials Science}.
-  \DOI{10.1016/j.commatsci.2020.110065}. Citations:~49
+  \DOI{10.1016/j.commatsci.2020.110065}. Citations:~63
   \GitHub{pyiron/pyiron\_meltingpoint}
   \\
 \Year{2020}  &
@@ -409,7 +445,7 @@ Google Scholar, 04/26: Citations: 501
   \Me, S. Surendralal, \YL, \MT, T. Hickel, \RD{} and \JN.
   pyiron: an integrated development environment for computational materials science.
   \emph{Computational Materials Science}.
-  \DOI{10.1016/j.commatsci.2018.07.043}. Citations:~176
+  \DOI{10.1016/j.commatsci.2018.07.043}. Citations:~216
   \GitHub{pyiron/pyiron}
   \\
   ~ &
@@ -432,10 +468,19 @@ Google Scholar, 04/26: Citations: 501
   Z. Wang, H. Huang, H. Zhao, C. Xu, S. Zhu, {\Me} and V. Viswanathan.
   DREAMS: Density Functional Theory Based Research Engine for Agentic Materials Simulation.
   \DOI{10.48550/arXiv.2507.14267}.
-  Citations:~18
+  Citations:~49
   \GitHub{BattModels/material\_agent}
 \end{EntriesTable}
 
+\subsection{Book Chapters}
+\begin{EntriesTable}
+\Year{2026}  &
+  T. Hickel, {\Me}, S. Menon, O. Waseda, L. Huber and J. Neugebauer.
+  pyiron - Developing and Managing Materials Science Workflows.
+  Published in \emph{Workflow systems for large-scale scientific data analysis}, Berlin Universities Publishing.
+\end{EntriesTable}
+
+\newpage
 \subsection{Open-source Software}
 
 \begin{EntriesTable}
@@ -449,6 +494,11 @@ Google Scholar, 04/26: Citations: 501
   \Role{Maintainer for materials science software}
   \newline • Contribution: over $1000$ packages with a total of over $500$ million downloads
   \GitHub{conda-forge/staged-recipes}
+  \\
+  \Year{2026} &
+  \textbf{pysqa} - Python Simple Queuing System Adapter
+  \newline • Contribution: Lead the development
+  \GitHub{pyiron/pysqa}
   \\
   \Year{2025} &
   \textbf{executorlib} - Up-scale python functions for high performance computing (HPC)
@@ -476,6 +526,12 @@ Google Scholar, 04/26: Citations: 501
 
 \begin{EntriesTable}
 %\Year{future}  &
+\Year{2026} &
+  \textbf{Organizer} for the Minisymposium on
+``Agentic Workflows for Trustworthy Discovery in Materials
+Science and Chemistry`` as part of the 
+  \textit{Platform for Advanced Scientific Computing conference}, Bern, Switzerland 
+  \\
 \Year{2025} &
   \textbf{Co-organizer} for the workshop on
 ``Machine Learning`` as part of the International Max Planck Research School for Sustainable Metallurgy.
@@ -500,8 +556,20 @@ Google Scholar, 04/26: Citations: 501
 
 \begin{EntriesTable}
 %\Year{future}  &
+\Year{2026} &
+  \textbf{Shared lecture series with Prof. G. Sutmann} on ``Programming and Numerical Methods`` for bachelor students in materials science and simulation.
+  \textit{Ruhr University Bochum}, Bochum, Germany.
+  \\
+  ~ &
+  \textbf{Two lectures} on ``Extension of Density Functional Theory: From Molecules to Solids`` as part of the lecture on ``Molecular Photonics and Excited-State Processes (MPESP)`` for master students in chemistry.
+  \textit{Heinrich Heine University}, D\"usseldorf, Germany.
+  \\
+  ~ &
+  \textbf{Single lecture} on ``pyiron - Complex Workflows Made Easy`` for NFDI-MatWerk Summer School. 
+  \textit{Ruhr University Bochum}, Bochum, Germany.
+  \\
 \Year{2025} &
-  \textbf{Shared lecture with Prof. G. Sutmann} on ``Programming Concepts in Materials Science`` for master students in materials science and simulation.
+  \textbf{Shared lecture series with Prof. G. Sutmann} on ``Programming Concepts in Materials Science`` for master students in materials science and simulation.
   \textit{Ruhr University Bochum}, Bochum, Germany.
   \\
   ~ &
@@ -534,31 +602,23 @@ Google Scholar, 04/26: Citations: 501
   \textbf{Haitham Wael Ali Awad Gaafer} (PhD student): Machine-learned interatomic potentials for chemo-mechanics balancing computational efficiency and accuracy
   \Role{Supervisor - acquiring the funding and leading the supervision of the PhD student}
   \\
-  ~ &
+\Duration{2026}{\Ongoing} &
+  \textbf{Varun Nair} (Master Student): Genetic Algorithms for high-throughput screening of defects
+  \Role{Supervisor - for a student research project}
+  \\
+\Duration{2024}{2026} &
   \textbf{Ziqi Wang} (PhD student): Autonomous discovery of novel battery materials with large language model agents and machine-learned interatomic potentials.
   \Role{Co-Supervisor - in collaboration with Prof. Viswanathan at University of Michigan}
   \\
-\Duration{2023}{\Ongoing} &
-  \textbf{Sk Md Ahnaf Akif Alvi} (PhD student): Autonomous in silico processing and materials discovery for additive manufacturing
+\Duration{2023}{2026} &
+  \textbf{Sk Md Ahnaf Akif Alvi} (PhD student): Autonomous in silico processing and materials discovery for additive manufacturing using Bayesian optimization.
   \Role{Co-Supervisor - in collaboration with Prof. Arroyave at Texas A\&M University}
   \\
-\Duration{2023}{2025} &
-  \textbf{Ilgar Baghishov} (intern): Multi-fidelity machine-learned interatomic potentials
-  \Role{Primary Supervisor - acquiring the funding and leading the supervision of the intern}
+\Duration{2023}{2026} &
+  \textbf{Ilgar Baghishov} (PhD student): Multi-fidelity machine-learned interatomic potentials
+  \Role{Co-Supervisor - in collaboration with Prof. Henkelman at the University of Texas at Austin}
   \\
-\Duration{2022}{2023} &
-  \textbf{Jason Blake Gibson} (intern): Transferability of interatomic machine learning potentials 
-  \Role{Primary Supervisor - acquiring the funding and leading the supervision of the intern}
-  \\
-\Year{2018} &
-  \textbf{Ankita Biswas} (student assistant): Calculation of vacancy formation energies with pyiron
-  \Role{Primary Supervisor - for a student research project}
-  \\
-\Year{2017} &
-  \textbf{Martin B\"ockmann} (student assistant): Monte Carlo sampling with pyiron
-  \Role{Primary Supervisor - guiding the student as the first user of the pyiron software}
 \end{EntriesTable}
-\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Presentations}
 
@@ -566,57 +626,85 @@ Google Scholar, 04/26: Citations: 501
 \begin{EntriesTable}
 \Year{2026}  &
   \Me.
-  Scalable sustainable materials design with the pyiron workflow framework, \emph{NERSC}, Berkeley, Ca, USA.
+  Large Language Model Agents for Materials Research Workflows.
+  \emph{Physical Sciences Data Infrastructure \& Royce Materials Data Summit Workshop}, Manchester, United Kingdom.  
   \\
   ~ &
   \Me.
-  Autonomous, Data-Driven Workflows for Materials Acceleration Platforms with pyiron, \emph{DPG Spring Meeting}, Dresden, Germany.
+  Large Language Model Agents Towards Autonomous Materials Discovery.
+  \emph{CECAM Workshop: Open Databases Integration for Materials Design}, Grenoble, France.  
+  \\
+  ~ &
+  \Me.
+  Autonomous Materials Discovery Using the pyiron Workflow Framework
+  \emph{Machine Learning in Chemical and Materials Sciences Workshop}, Santa Fe, NM, USA.  
+  \\
+  ~ &
+  \Me.
+  FAIR data management with the pyiron workflow framework,
+  \emph{CECAM Workshop: FAIR Data management of theoretical spectroscopy and Green’s function methods}, Lausanne, Switzerland.  
+  \\
+  ~ &
+  \Me.
+  Towards Autonomous Materials Design with the pyiron Workflow Framework, \emph{Seminar series organized by Materials Valley e.V.}, Hanau, Germany (online).  
+  \\
+  ~ &
+  \Me.
+  Uncomfortable Truth about Materials Informatics, \emph{Group Seminar at University of Stuttgart}, invited by Prof. B. Grabowski, Stuttgart, Germany.
+  \\
+  ~ &
+  \Me.
+  Scalable sustainable materials design with the pyiron workflow framework, \emph{Seminar at National Energy Research Scientific Computing (NERSC)}, Berkeley, CA, USA.
+  \\
+  ~ &
+  \Me.
+  Autonomous, Data-Driven Workflows for Materials Acceleration Platforms with pyiron, \emph{DPG Spring Conference}, Dresden, Germany.
   \\
   ~ &
   \Me. 
-  Up-scaling Python functions for HPC with executorlib, \emph{Workflows Community Talks},
-  Chicago, Il, USA (online).
+  Up-scaling Python functions for HPC with executorlib, \emph{Seminar series organized by Workflows Community},
+  Chicago, IL, USA (online).
   \\
 \Year{2025}  &
   \Me.
   Autonomous Materials Science Research,
-  \emph{European Space Agency AI STAR Symposium},
+  \emph{Artificial Intelligence Symposium on Theory, Application, and Research (AI STAR) Workshop at European Space Agency},
   Darmstadt, Germany.
   \\
   ~ &
   \Me.
   Can a machine predict novel sustainable materials? Towards using LLMs for Materials Design,
-  \emph{Birmingham University},
+  \emph{Seminar at Birmingham University}, invited by Prof. Nils Warnken, 
   Birmingham, United Kingdom.
   \\
   ~ &
   \Me.
   Autonomous Materials Science Research,
-  \emph{German Research Centre for Artificial Intelligence},
+  \emph{Seminar at German Research Centre for Artificial Intelligence},
   Saarbrücken, Germany.
   \\
   ~ &
   \Me.
   Up-scale Python Functions for High-Performance Computing with Executorlib,
-  \emph{Department of Energy Python Exchange},
+  \emph{Seminar series organized by Department of Energy Python Exchange},
   New York, NY, USA (online).
   \\
   ~ &
   \Me.
   Predict the chemistry of sustainable materials with machine learning,
-  \emph{Seminar in department of Chemistry at the University of Utah},
+  \emph{Seminar at University of Utah}, invited by Prof. A. Clark,
   Salt Lake City, UT, USA.
   \\
   ~ &
   \Me.
   Accelerating Materials Discovery with Machine Learning,
-  \emph{Nanomaterials: Computation, Theory, Machine Learning and Experiment},
+  \emph{Nanomaterials: Computation, Theory, Machine Learning and Experiment Workshop},
   Telluride, CO, USA.
   \\
   ~ &
   \Me.
   Large Language Model Agents Towards Autonomous Materials Discovery,
-  \emph{Center for Nonlinear Studies (CNLS) Seminar at Los Alamos National Laboratory}, 
+  \emph{Seminar at the Center for Nonlinear Studies (CNLS)  at Los Alamos National Laboratory}, 
   Los Alamos, NM, USA.
   \\
   ~ &
@@ -634,14 +722,13 @@ Google Scholar, 04/26: Citations: 501
   ~ &
   \Me.
   Predicting Sustainable Materials with Machine Learning,
-  \emph{Machine learning with computational materials science data for modelling nanocrystal catalysts},
+  \emph{Machine learning with computational materials science data for modelling nanocrystal catalysts workshop},
   Freiburg, Germany.
   \\
 \Year{2024}  &
   \Me.
   How to use machine learning in the discovery and design of materials for the future?,
-  \emph{Michigan Institute for Computational Discovery \& Engineering},
-  Michigan, MI, USA.
+  \emph{Seminar at Michigan Institute for Computational Discovery \& Engineering}, invited by Prof. V. Viswanathan, Michigan, MI, USA.
   \\
   ~ &
   \Me.
@@ -652,19 +739,19 @@ Google Scholar, 04/26: Citations: 501
   ~ &
   \Me.
   pyiron: Simulation Workflows for Data-Driven Materials Design,
-  \emph{Center for Nonlinear Studies (CNLS) Seminar Los Alamos National Laboratory},
+  \emph{Seminar at the Center for Nonlinear Studies (CNLS) at Los Alamos National Laboratory},
   Los Alamos, NM, USA.
   \\
   ~ &
   \Me.
   pyiron: workflows for the development and assessment of interatomic potentials,
   \emph{Workshop on Machine Learning Force Fields at the institute for mathematical and statistical innovation (IMSI)},
-  Chicago, Il, USA.
+  Chicago, IL, USA.
   \\
 \Year{2023}  &
   {\Me} and \JN.
   Rapid prototyping and up-scaling atomistic workflows with pyiron,
-  \emph{Ab initio Description of Iron and Steel (ADIS): Digitalization and Workflows},
+  \emph{Ab initio Description of Iron and Steel (ADIS) Workshop: Digitalization and Workflows},
   Kreuth, Germany.
   \\
   ~ &
@@ -688,25 +775,25 @@ Google Scholar, 04/26: Citations: 501
 \Year{2022}  &
   \Me, T. Hickel and \JN.
   Automated atomistic calculation of thermodynamic and thermophysical data,
-  \emph{DPG Fall Meeting},
+  \emph{DPG Fall conference},
   Regensburg, Germany.
   \\
   ~ &
   \Me.
   pyiron - an integrated development environment (IDE) for scientific workflows at scale,
-  \emph{Department of Energy Python Exchange},
+  \emph{Seminar series organized by the Department of Energy Python Exchange},
   New York, NY, USA (online).
   \\
   ~ &
   \Me.
   Up-scaling simulation protocols with pyiron,
-  \emph{Platform Material Digital Workflow Meeting 2022},
+  \emph{Workshop organized by the Platform Material Digital},
   Berlin, Germany (online).
   \\
   ~ &
   \Me.
   pyiron - an integrated development environment (IDE) for materials science,
-  \emph{Special Interest Group Data Infrastructure (SIGDIUS) Seminar},
+  \emph{Special Interest Group Data Infrastructure (SIGDIUS) Seminar at Stuttgart University},
   Stuttgart, Germany (online).
   \\
 \Year{2021}  &
@@ -718,7 +805,7 @@ Google Scholar, 04/26: Citations: 501
 \Year{2020}  &
   \Me, T. Hickel and \JN.
   Uncertainty quantification for \textit{ab initio} thermodynamics,
-  \emph{Group Seminar Professor \RD},
+  \emph{Seminar at Ruhr University Bochum}, invited by Prof. R. Drautz, 
   Bochum, Germany (online).
   \\
   ~ &
@@ -730,29 +817,37 @@ Google Scholar, 04/26: Citations: 501
 \Year{2019}  &
   \Me, T. Hickel and \JN.
   Automated \textit{ab initio} determination of materials properties at finite temperatures with pyiron,
-  \emph{Center for Nonlinear Studies (CNLS) Seminar at Los Alamos National Laboratory},
+  \emph{Seminar at the Center for Nonlinear Studies (CNLS) at Los Alamos National Laboratory},
   Los Alamos, NM, USA.
   \\
   ~ &
   \Me, T. Hickel and \JN.
   pyiron - an integrated development environment for computational materials science,
-  \emph{Group Seminar Professor G. Kresse},
+  \emph{Seminar at University of Vienna}, invited by Prof. G. Kresse
   Vienna, Austria.
   \\
 \end{EntriesTable}
 \subsection{Talks at International Conferences}
 \begin{EntriesTable}
 \Year{2026}  &
+  {\Me} and J. Neugebauer.
+  Large Language Model Agents For Atomistic Simulation Workflows, \emph{Materials Science and Engineering Conference}, Darmstadt, Germany.
+  \\
+  ~ &
+  \Me.
+  pyiron – A Workflow Framework for Trustworthy Agentic Workflows in Materials Science, \emph{Platform for Advanced Scientific Computing}, Bern, Switzerland.
+  \\
+  ~ &
   T. Hickel, {\Me} and J. Neugebauer.
-  Data-Driven and LLM-Based Design of Hydrogen Solubilities in Metallic Alloys, \emph{TMS Spring Meeting}, San Diego, Ca, USA.
+  Data-Driven and LLM-Based Design of Hydrogen Solubilities in Metallic Alloys, \emph{TMS Spring Meeting}, San Diego, CA, USA.
   \\
   ~ &
   {\Me} and J. Neugebauer.
-  Large Language Model Agents for Atomistic Simulation Workflows, \emph{TMS Spring Meeting}, San Diego, Ca, USA.
+  Large Language Model Agents for Atomistic Simulation Workflows, \emph{TMS Spring Meeting}, San Diego, CA, USA.
   \\
   ~ &
   \Me, P. Chilakalapudi, H. Gaafer and J. Neugebauer. 
-  Uncertainty Propagation for Ab Initio Thermodynamic Phase Diagrams, \emph{TMS Spring Meeting}, San Diego, Ca, USA.
+  Uncertainty Propagation for Ab Initio Thermodynamic Phase Diagrams, \emph{TMS Spring Meeting}, San Diego, CA, USA.
   \\
   ~ &
   H. L. Mai, \Me, T. Hickel and J. Neugebauer. 
@@ -824,7 +919,7 @@ Google Scholar, 04/26: Citations: 501
   {\Me} and D. Perez.
   Transferable Machine Learning Potentials for Extreme Environments,
   \emph{TMS Spring Meeting},
-  Orlando, Fl, USA.
+  Orlando, FL, USA.
   \\
 \Year{2023}  &
   {\Me} and D. Perez.
